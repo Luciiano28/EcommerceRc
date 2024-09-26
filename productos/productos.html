@@ -93,21 +93,102 @@
     </header>
     <div class="product-container">
         <div class="product-images">
-            <img src="/productos/imgproducts/zdeportivas1.webp" alt="Zapatillas de Básquet" class="main-image">
+            <div class="main-image-container">
+                <img src="/productos/imgproducts/zdeportivas1.webp" alt="Zapatillas de Básquet" class="main-image" id="main-image">
+            </div>
             <div class="thumbnail-images">
-                <img src="/productos/imgproducts/zdeportivas2.webp" alt="Thumbnail 1" class="thumbnail">
-                <img src="/productos/imgproducts/zdeportivas3.webp" alt="Thumbnail 2" class="thumbnail">
-                <img src="/productos/imgproducts/zdeportivas4.webp" alt="Thumbnail 3" class="thumbnail">
-                <img src="/productos/imgproducts/zdeportivas5.webp" alt="Thumbnail 4" class="thumbnail">
+                <img src="/productos/imgproducts/zdeportivas1.webp" alt="Thumbnail 1" class="thumbnail" onclick="changeImage(this.src)">
+                <img src="/productos/imgproducts/zdeportivas2.webp" alt="Thumbnail 2" class="thumbnail" onclick="changeImage(this.src)">
+                <img src="/productos/imgproducts/zdeportivas3.webp" alt="Thumbnail 3" class="thumbnail" onclick="changeImage(this.src)">
+                <img src="/productos/imgproducts/zdeportivas4.webp" alt="Thumbnail 4" class="thumbnail" onclick="changeImage(this.src)">
+                <img src="/productos/imgproducts/zdeportivas5.webp" alt="Thumbnail 5" class="thumbnail" onclick="changeImage(this.src)">
             </div>
         </div>
         <div class="product-info">
             <h1 class="product-title">Zapatillas de Básquet Premium</h1>
             <p class="product-price">$99.99</p>
             <p class="product-description">Zapatillas de alto rendimiento diseñadas para jugadores de básquet. Ofrece excelente soporte y amortiguación para un juego óptimo en la cancha.</p>
-            <button class="add-to-cart">Agregar al Carrito</button>
+            
+            <div class="size-selector">
+                <label for="size">Talle:</label>
+                <select id="size" name="size">
+                    <option value="38">38</option>
+                    <option value="39">39</option>
+                    <option value="40">40</option>
+                    <option value="41">41</option>
+                    <option value="42">42</option>
+                    <option value="43">43</option>
+                    <option value="44">44</option>
+                </select>
+            </div>
+            
+            <div class="payment-methods">
+                <h3>Medios de pago:</h3>
+                <div class="payment-logos">
+                    <img width="50" height="50" src="https://img.icons8.com/ios/50/visa.png" alt="visa"/>
+                    <img width="50" height="50" src="https://img.icons8.com/ios-filled/50/mastercard.png" alt="mastercard"/>
+                    <img width="50" height="50" src="https://img.icons8.com/ios/50/amex.png" alt="amex"/>                    
+                    <img width="50" height="50" src="https://img.icons8.com/material-rounded/48/paypal.png" alt="paypal"/>
+                </div>
+                <br>
+                <div class="buttons">
+                    <button class="add-to-cart" onclick="addToCart()">Agregar al Carrito</button>
+                    <button class="buy-now" onclick="buyNow()">Comprar Ahora</button>
+                </div>
+            </div>
+            
         </div>
     </div>
+
+    <div class="comments-section">
+        <h2>Comentarios del Producto</h2>
+        <div id="comments-list">
+            <div class="comment">
+                <div class="comment-author">Juan Pérez</div>
+                <div class="comment-date">15 de marzo de 2024</div>
+                <p>Excelentes zapatillas, muy cómodas y duraderas. Las recomiendo totalmente.</p>
+            </div>
+            <div class="comment">
+                <div class="comment-author">María González</div>
+                <div class="comment-date">10 de marzo de 2024</div>
+                <p>Buen producto, pero tuve que pedir un número más grande del que uso normalmente.</p>
+            </div>
+        </div>
+        <div class="new-comment">
+            <h3>Deja tu comentario</h3>
+            <textarea id="new-comment-text" rows="4" placeholder="Escribe tu comentario aquí"></textarea>
+            <button onclick="addComment()">Enviar Comentario</button>
+        </div>
+    </div>
+
+    <div class="recommended-products"></div>
+        <h2>Productos Recomendados</h2>
+        <br>
+        <div class="recommended-products-grid">
+            <div class="recommended-product">
+                <img src="/ECOMMERCE/img/calzadoindex.png" alt="Zapatillas de Running">
+                <div class="recommended-product-info">
+                    <h3 class="recommended-product-title">Zapatillas de Running Pro</h3>
+                    <p class="recommended-product-price">$89.99</p>
+                </div>
+            </div>
+            <div class="recommended-product">
+                <img src="/ECOMMERCE/img/accesoriosindex.png" alt="Camiseta de Entrenamiento">
+                <div class="recommended-product-info">
+                    <h3 class="recommended-product-title">Camiseta de Entrenamiento Transpirable</h3>
+                    <p class="recommended-product-price">$29.99</p>
+                </div>
+            </div>
+            <div class="recommended-product">
+                <img src="/ECOMMERCE/img/indumentariaindex.png" alt="Pelota de Básquet">
+                <div class="recommended-product-info">
+                    <h3 class="recommended-product-title">Pelota de Básquet Oficial</h3>
+                    <p class="recommended-product-price">$49.99</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <br>
     <footer>
         <div class="container">
             <div class="footer-columns">
