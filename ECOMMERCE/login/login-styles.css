@@ -19,15 +19,184 @@ body {
 }
 
 /* Header */
-header {
+.top-bar {
+    background-color: #000;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+}
+
+
+.main-nav {
     background-color: #fff;
+    padding: 10px 0; 
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    padding: 15px 0;
+}
+
+.main-nav .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .logo img {
-    max-width: 150px;
+    max-width: 150px; 
     height: auto;
+}
+
+.search-bar {
+    display: flex;
+    flex-grow: 1;
+    margin: 0 15px; 
+}
+
+.search-bar input {
+    flex-grow: 1;
+    padding: 8px; 
+    border: 1px solid #ddd;
+    border-right: none;
+    font-size: 14px; 
+}
+
+.search-bar button {
+    padding: 8px 15px; 
+    background-color: #000;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    font-size: 14px; 
+}
+
+.user-actions {
+    display: flex;
+    gap: 15px; 
+}
+
+.icon-link {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    text-decoration: none;
+    color: #333;
+    font-size: 14px; 
+}
+
+.icon-link img {
+    width: 20px; 
+    height: 20px; 
+}
+
+
+@media (max-width: 768px) {
+    .main-nav .container {
+        flex-direction: column;
+        gap: 10px; 
+    }
+
+    .logo img {
+        max-width: 120px; 
+    }
+
+    .search-bar {
+        width: 100%;
+        margin: 10px 0; 
+    }
+
+    .user-actions {
+        width: 100%;
+        justify-content: space-around;
+    }
+}
+
+.category-nav {
+    background-color: #f8f8f8;
+    padding: 0;
+    border-bottom: 1px solid #e7e7e7;
+}
+
+.category-nav .container {
+    position: relative;
+}
+
+.category-nav ul {
+    display: flex;
+    justify-content: space-between;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.category-nav > .container > ul > li {
+    position: relative;
+}
+
+.category-nav a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+    display: block;
+    padding: 15px 20px;
+    transition: background-color 0.3s ease;
+}
+
+.category-nav > .container > ul > li > a:hover {
+    background-color: #e7e7e7;
+}
+
+
+.category-nav ul ul {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #f8f8f8;
+    border: 1px solid #e7e7e7;
+    border-top: none;
+    min-width: 200px;
+    z-index: 1000;
+}
+
+.category-nav ul li:hover > ul {
+    display: block;
+}
+
+.category-nav ul ul li {
+    width: 100%;
+}
+
+.category-nav ul ul a {
+    padding: 10px 20px;
+    font-weight: normal;
+}
+
+.category-nav ul ul li:hover > a {
+    background-color: #e7e7e7;
+}
+
+
+@media (max-width: 768px) {
+    .category-nav ul {
+        flex-direction: column;
+    }
+
+    .category-nav > .container > ul > li {
+        border-bottom: 1px solid #e7e7e7;
+    }
+
+    .category-nav ul ul {
+        position: static;
+        display: none;
+        background-color: #f0f0f0;
+        width: 100%;
+    }
+
+    .category-nav ul li:hover > ul {
+        display: block;
+    }
+
+    .category-nav ul ul a {
+        padding-left: 30px;
+    }
 }
 
 /* Main content */
@@ -149,30 +318,64 @@ input[type="password"] {
     color: #fff;
 }
 
-/* Footer */
 footer {
     background-color: #333;
     color: #fff;
-    text-align: center;
-    padding: 20px 0;
-    margin-top: 40px;
+    padding: 40px 0;
 }
 
-/* Responsive design */
-@media (max-width: 480px) {
-    .login-container {
-        padding: 20px;
-    }
+.footer-columns {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+}
 
-    .social-buttons {
+.footer-column h4 {
+    margin-bottom: 15px;
+}
+
+.footer-column ul {
+    list-style-type: none;
+}
+
+.footer-column a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.social-links {
+    display: flex;
+    gap: 10px;
+}
+
+.footer-bottom {
+    margin-top: 20px;
+    text-align: center;
+}
+
+
+@media (max-width: 768px) {
+    .main-nav .container {
         flex-direction: column;
+        gap: 15px;
     }
 
-    .btn-social {
-        margin-bottom: 10px;
+    .logo img {
+        max-width: 150px;
     }
 
-    .btn-facebook {
-        margin-right: 0;
+    .search-bar {
+        width: 100%;
+        margin: 15px 0;
+    }
+
+    .category-nav ul {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;
+    }
+
+    .footer-columns {
+        grid-template-columns: 1fr;
     }
 }

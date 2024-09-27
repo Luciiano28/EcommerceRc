@@ -18,13 +18,14 @@ body {
     padding: 0 15px;
 }
 
-/* Header Styles */
+/* Header */
 .top-bar {
     background-color: #000;
     color: #fff;
     text-align: center;
     padding: 10px 0;
 }
+
 
 .main-nav {
     background-color: #fff;
@@ -43,7 +44,6 @@ body {
     height: auto;
 }
 
-/* Search Bar Styles */
 .search-bar {
     display: flex;
     flex-grow: 1;
@@ -67,7 +67,6 @@ body {
     font-size: 14px; 
 }
 
-/* User Actions Styles */
 .user-actions {
     display: flex;
     gap: 15px; 
@@ -85,6 +84,28 @@ body {
 .icon-link img {
     width: 20px; 
     height: 20px; 
+}
+
+
+@media (max-width: 768px) {
+    .main-nav .container {
+        flex-direction: column;
+        gap: 10px; 
+    }
+
+    .logo img {
+        max-width: 120px; 
+    }
+
+    .search-bar {
+        width: 100%;
+        margin: 10px 0; 
+    }
+
+    .user-actions {
+        width: 100%;
+        justify-content: space-around;
+    }
 }
 
 /* Category Navigation Styles */

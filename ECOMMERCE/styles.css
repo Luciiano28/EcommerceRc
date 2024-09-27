@@ -245,7 +245,7 @@ body {
 
 .featured-products {
     padding: 40px 0;
-    background-color: #f8f8f8;
+    background-color: #ffffff;
 }
 
 .product-grid {
@@ -256,7 +256,7 @@ body {
 }
 
 .product-card {
-    background-color: #fff;
+    background-color: #ebeef0;
     padding: 20px;
     text-align: center;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
