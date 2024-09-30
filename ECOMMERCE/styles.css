@@ -346,3 +346,70 @@ footer {
         grid-template-columns: 1fr;
     }
 }
+/* Estilos existentes... */
+
+/* Estilos para el banner de ancho completo */
+.full-width-banner {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+}
+
+.full-width-banner img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.banner-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.cta-button {
+    display: inline-block;
+    padding: 12px 24px;
+    background-color: #ff6600;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+}
+
+.cta-button:hover {
+    background-color: #ff8533;
+}
+
+/* Asegúrate de que el contenedor principal no tenga padding que pueda afectar el ancho completo */
+body, main {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    overflow-x: hidden;
+}
+
+/* Ajusta el contenedor para las otras secciones si es necesario */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+/* Estilos responsivos */
+@media (max-width: 768px) {
+    /* Estilos responsivos existentes... */
+
+    .full-width-banner img {
+        height: auto;
+        object-fit: cover;
+    }
+
+    .cta-button {
+        padding: 10px 20px;
+        font-size: 14px;
+    }
+}
