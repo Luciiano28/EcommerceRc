@@ -9,7 +9,7 @@ body {
     font-family: Arial, sans-serif;
     line-height: 1.6;
     color: #333;
-    padding-top: 20px;
+    padding-top: auto;
 }
 
 .container {
@@ -20,7 +20,7 @@ body {
 
 /* Header */
 .top-bar {
-    background-color: #000;
+    background-color: #000000;
     color: #fff;
     text-align: center;
     padding: 10px 0;
@@ -257,7 +257,7 @@ body {
 
 /* Footer Styles */
 footer {
-    background-color: #333;
+    background-color: #000000;
     color: #fff;
     padding: 40px 0;
 }

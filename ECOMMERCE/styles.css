@@ -30,7 +30,7 @@ body {
 }
 
 .main-nav {
-    background-color: #fff;
+    background-color: #ffffff;
     padding: 10px 0;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
@@ -233,7 +233,7 @@ body {
 
 /* Footer Styles */
 footer {
-    background-color: #333;
+    background-color: #000000;
     color: #fff;
     padding: 40px 0;
 }
