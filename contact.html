@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tu carrito | Rolling</title>
-    <link rel="stylesheet" href="carrito-styles.css">
+    <title>Contacto - Rolling</title>
+    <link rel="stylesheet" href="contact-styles.css">
 </head>
 <body>
     <header>
@@ -20,7 +20,7 @@
                 </div>
                 <div class="search-bar">
                     <input type="text" placeholder="¿Qué estás buscando?">
-                    <button type="submit">Buscar</button>
+                    <a href="/404nofound.html"><button type="submit">Buscar</button></a>
                 </div>
                 <div class="user-actions">
                     <a href="/ECOMMERCE/login/login.html" class="icon-link">
@@ -41,8 +41,8 @@
                         <a href="#">Calzados</a>
                         <ul>
                             <li><a href="/catalogos/gallery.html">Under Armour</a></li>
-                            <li><a href="#">Nike</a></li>
-                            <li><a href="#">Adidas</a></li>
+                            <li><a href="/404nofound.html">Nike</a></li>
+                            <li><a href="/404nofound.html">Adidas</a></li>
                         </ul>
                     </li>
                     <li>
@@ -95,52 +95,63 @@
         </nav>
     </header>
 
+    <main class="container">
+        <div class="contact-grid">
+            <section class="contact-form">
+                <h2>Formulario de Consulta</h2>
+                <form action="#" method="POST">
+                    <label for="nombre">Nombre:</label>
+                    <input type="text" id="nombre" name="nombre" required>
 
-    <main>
-        <h1>Tu carrito RollingCode</h1>
-        <div class="cart-container">
-            <div class="cart-items">
-                <div class="cart-item">
-                    <img src="/carrito/carrito2.png" alt="Producto 1" class="item-image">
-                    <div class="item-details">
-                        <h2>Calzado UA Buzzer Basketball</h2>
-                        <p>Color: Negro</p>
-                        <p>Talle: 41</p>
-                        <p>Cantidad: 1</p>
-                        <p class="item-price">$230.000</p>
-                    </div>
-                    <button class="remove-item">Eliminar</button>
-                </div>
-            </div>
-            <div class="cart-summary">
-                <h2>Resumen de compra</h2>
-                <div class="summary-row">
-                    <span>Subtotal</span>
-                    <span>$230.000</span>
-                </div>
-                <div class="summary-row">
-                    <span>Envío</span>
-                    <span>Gratis</span>
-                </div>
-                <div class="summary-row total">
-                    <span>Total</span>
-                    <span>$230.000</span>
-                </div>
-                <a href="/error404.png"><button class="checkout-button">Finalizar compra</button></a>
-                <p class="continue-shopping"><a href="/catalogos/gallery.html">Seguir comprando</a></p>
-            </div>
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+
+                    <label for="asunto">Asunto:</label>
+                    <input type="text" id="asunto" name="asunto" required>
+
+                    <label for="mensaje">Mensaje:</label>
+                    <textarea id="mensaje" name="mensaje" rows="5" required></textarea>
+
+                    <button type="submit">Enviar Consulta</button>
+                </form>
+            </section>
+
+            <section class="contact-info">
+                <h2>Datos de Contacto</h2>
+                <ul>
+                    <li>Teléfono: +3865695585</li>
+                    <li>Email: deportesrolling@empresa.com</li>
+                    <li>Dirección: Calle Principal 123, 28001 Tucuman, Argentina</li>
+                    <li>Horario: Lunes a Viernes, 9:00 - 18:00</li>
+                </ul>
+            </section>
+
+            <section class="newsletter">
+                <h2>Suscríbete a nuestro Newsletter</h2>
+                <form action="#" method="POST">
+                    <label for="newsletter-email">Email:</label>
+                    <input type="email" id="newsletter-email" name="newsletter-email" required>
+                    <button type="submit">Suscribirse</button>
+                </form>
+            </section>
+
+            <section class="map">
+                <h2>Nuestra Ubicación</h2>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3560.1060679494954!2d-65.20974192528035!3d-26.83657849002562!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94225d3ad7f30f1d%3A0xf8606cd659b8e3e4!2sRollingCode%20School!5e0!3m2!1ses!2sar!4v1728039623552!5m2!1ses!2sar" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </section>
         </div>
     </main>
-
     <footer>
         <div class="container">
             <div class="footer-columns">
                 <div class="footer-column">
-                    <h4>Atención al cliente</h4>
+                    <h4>Ayuda</h4>
                     <ul>
                         <li><a href="/contact.html">Contacto</a></li>
                         <li><a href="#">Preguntas frecuentes</a></li>
                         <li><a href="#">Cambios y devoluciones</a></li>
+                        <li><a href="#">Como comprar?</a></li>
+                        <li><a href="#">Como medir tu talle?</a></li>
                     </ul>
                 </div>
                 <div class="footer-column">
@@ -149,6 +160,8 @@
                         <li><a href="#">Quiénes somos</a></li>
                         <li><a href="#">Locales</a></li>
                         <li><a href="#">Trabaja con nosotros</a></li>
+                        <li><a href="#">Defensa al consumidor</a></li>
+                        <li><a href="#">Terminos y condiciones</a></li>
                     </ul>
                 </div>
                 <div class="footer-column">
