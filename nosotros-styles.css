@@ -153,70 +153,26 @@ body {
     background-color: #e7e7e7;
 }
 
-/* Main Content Styles */
-main {
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;
-    padding: 40px 0;
-}
-
-.register-form {
-    background-color: #fff;
-    padding: 30px;
-    border-radius: 5px;
-    box-shadow: 0 0 10px rgba(0,0,0,0.1);
-    width: 100%;
-    max-width: 400px;
-}
-
-h1 {
-    font-size: 24px;
-    margin-bottom: 20px;
-}
-
-.form-group {
-    margin-bottom: 20px;
-}
-
-label {
-    display: block;
-    margin-bottom: 5px;
-    font-weight: bold;
-}
-
-input[type="text"],
-input[type="email"],
-input[type="password"] {
-    width: 100%;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 3px;
-}
-
-.checkbox-group {
-    display: flex;
-    align-items: center;
-    margin-bottom: 20px;
-}
-
-.checkbox-group input {
-    margin-right: 10px;
-}
-
-button {
-    background-color: #000;
-    color: #fff;
-    border: none;
-    padding: 12px 20px;
-    font-size: 16px;
-    cursor: pointer;
-    width: 100%;
-}
-
-.login-link {
+/* Profile Styles */
+.profile {
     text-align: center;
     margin-top: 20px;
+}
+
+.profile-img {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 5px solid #e8491d;
+}
+
+.about-text {
+    background: #ffffff;
+    padding: 20px;
+    margin-top: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
 }
 
 /* Footer Styles */
@@ -303,12 +259,13 @@ footer {
         padding-left: 30px;
     }
 
-    main {
-        padding: 20px 0;
+    .profile-img {
+        width: 150px;
+        height: 150px;
     }
 
-    .register-form {
-        padding: 20px;
+    .about-text {
+        padding: 15px;
     }
 
     .footer-columns {
@@ -323,10 +280,6 @@ footer {
 @media (max-width: 480px) {
     .container {
         padding: 0 10px;
-    }
-
-    h1 {
-        font-size: 20px;
     }
 
     .search-bar input,
@@ -347,18 +300,12 @@ footer {
         padding: 10px 15px;
     }
 
-    .register-form {
-        padding: 15px;
+    .profile-img {
+        width: 120px;
+        height: 120px;
     }
 
-    input[type="text"],
-    input[type="email"],
-    input[type="password"] {
-        padding: 8px;
-    }
-
-    button {
-        padding: 10px 15px;
-        font-size: 14px;
+    .about-text {
+        padding: 10px;
     }
 }

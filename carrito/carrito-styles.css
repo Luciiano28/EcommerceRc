@@ -1,3 +1,4 @@
+/* Reset and Base Styles */
 * {
     box-sizing: border-box;
     margin: 0;
@@ -8,8 +9,6 @@ body {
     font-family: Arial, sans-serif;
     line-height: 1.6;
     color: #333;
-    margin: 0;
-    padding: 0;
     width: 100%;
     overflow-x: hidden;
 }
@@ -156,6 +155,7 @@ body {
     font-size: 1.5rem;
 }
 
+/* Main Content Styles */
 main {
     max-width: 1200px;
     margin: 0 auto;
@@ -166,6 +166,7 @@ h1 {
     margin-bottom: 2rem;
 }
 
+/* Cart Styles */
 .cart-container {
     display: flex;
     flex-wrap: wrap;
@@ -249,6 +250,7 @@ h1 {
     text-decoration: none;
 }
 
+/* Footer Styles */
 footer {
     background-color: #000000;
     color: #fff;
@@ -282,4 +284,73 @@ footer {
 .footer-bottom {
     margin-top: 20px;
     text-align: center;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .main-nav .container {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .logo img {
+        max-width: 120px;
+    }
+
+    .search-bar {
+        width: 100%;
+        margin: 15px 0;
+    }
+
+    .user-actions {
+        width: 100%;
+        justify-content: space-around;
+    }
+
+    .category-nav ul {
+        flex-direction: column;
+    }
+
+    .category-nav > .container > ul > li {
+        border-bottom: 1px solid #e7e7e7;
+    }
+
+    .category-nav ul ul {
+        position: static;
+        display: none;
+        background-color: #f0f0f0;
+        width: 100%;
+    }
+
+    .category-nav ul li:hover > ul {
+        display: block;
+    }
+
+    .category-nav ul ul a {
+        padding-left: 30px;
+    }
+
+    .cart-container {
+        flex-direction: column;
+    }
+
+    .cart-items,
+    .cart-summary {
+        flex: 1 1 100%;
+    }
+
+    .cart-item {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .item-image {
+        margin-right: 0;
+        margin-bottom: 1rem;
+    }
+
+    .footer-columns {
+        grid-template-columns: 1fr;
+    }
 }
